@@ -25,7 +25,7 @@ def diabetes_prediction():
     blood_glucose = st.sidebar.number_input("Present Glucose level")
     if st.button("Predict Diabetes"):
         # Load the datasets
-        df = pd.read_csv('dataset.csv')
+        df = pd.read_csv('dataset (1).csv')
         # Split the data into features and target
         x = df.drop(['diabetes', 'gender'], axis=1).values
         y = df['diabetes'].values
@@ -112,8 +112,8 @@ def ayurvedic_food_recommendation():
     elif(height>=230):
         st.sidebar.warning("Please enter your height")
         return
-    nutrition_data = pd.read_csv('nutrition.csv')
-    modified_data = pd.read_csv('Modified.csv')
+    nutrition_data = pd.read_csv('nutrition (1).csv')
+    modified_data = pd.read_csv('Modified (1).csv')
     # Performing  KMeans clustering on nutrition data
     kmeans_nutrition = KMeans(n_clusters=5)
     kmeans_nutrition.fit(nutrition_data)
